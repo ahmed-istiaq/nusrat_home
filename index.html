@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"primary-fixed-dim":"#ffaedc","tertiary":"#00e38e","on-primary":"#600049","background":"#14121b","on-primary-fixed-variant":"#880068","surface-bright":"#3b3842","on-error-container":"#ffdad6","tertiary-fixed-dim":"#00e38e","on-tertiary-fixed-variant":"#005230","inverse-on-surface":"#322f39","surface-container-high":"#2b2933","tertiary-fixed":"#54ffaa","on-secondary-fixed":"#001f29","surface-container-lowest":"#0f0d16","inverse-surface":"#e6e0ee","on-tertiary-container":"#004528","outline-variant":"#54414b","on-error":"#690005","on-primary-fixed":"#3b002c","error":"#ffb4ab","secondary-container":"#00cbfc","surface-container-low":"#1c1a24","error-container":"#93000a","on-secondary-fixed-variant":"#004d62","on-primary-container":"#ff71ce","surface-tint":"#ffaedc","secondary-fixed":"#b9eaff","on-background":"#e6e0ee","on-tertiary":"#003920","outline":"#a28a96","surface":"#14121b","primary-fixed":"#ffd8eb","primary":"#ffaedc","on-tertiary-fixed":"#002110","primary-container":"#ff71ce","inverse-primary":"#a72683","on-surface-variant":"#dabfcc","surface-container":"#211e28","on-surface":"#e6e0ee","secondary":"#98e1ff","on-secondary-container":"#005267","tertiary-container":"#00bd76","secondary-fixed-dim":"#58d5ff","surface-variant":"#36333e","on-secondary":"#003544","surface-container-highest":"#36333e","surface-dim":"#14121b"},"borderRadius":{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},"spacing":{"margin":"2rem","space-md":"1rem","gutter":"1.5rem","space-sm":"0.5rem","margin-mobile":"1.25rem","space-xs":"0.25rem","gutter-mobile":"1rem","space-xl":"2.5rem","space-lg":"1.5rem"},"fontFamily":{"title-md":["Outfit"],"headline-md":["Outfit"],"body-md":["Inter"],"headline-sm":["Outfit"],"body-sm":["Inter"],"headline-lg":["Outfit"],"label-sm":["Outfit"],"display-lg":["Outfit"],"display-lg-mobile":["Outfit"],"headline-lg-mobile":["Outfit"],"label-md":["Outfit"],"body-lg":["Inter"],"label-lg":["Outfit"]},"fontSize":{"title-md":["16px",{"lineHeight":"24px","letterSpacing":"0.01em","fontWeight":"500"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"headline-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"700"}],"display-lg":["56px",{"lineHeight":"64px","letterSpacing":"-0.03em","fontWeight":"700"}],"display-lg-mobile":["38px",{"lineHeight":"46px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.02em","fontWeight":"600"}]}}}};</script></head><body class="bg-background font-body-md text-body-md text-on-surface min-h-screen selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden">
+<!-- Top Floating Navbar -->
+<header class="fixed top-3 sm:top-4 left-1/2 -translate-x-1/2 z-50 w-[92%] sm:w-[90%] max-w-5xl transition-all">
+<div class="w-full rounded-full backdrop-blur-xl bg-[#14121b]/85 border border-pink-500/25 shadow-[0_10px_35px_rgba(0,0,0,0.6),0_0_20px_rgba(255,113,206,0.18)] flex items-center justify-between px-3.5 sm:px-6 py-2 transition-all">
+<!-- Brand -->
+<a class="flex items-center gap-1.5 group select-none" data-path="home" href="#">
+<span class="font-headline-sm text-base sm:text-lg tracking-wider text-primary group-hover:drop-shadow-[0_0_12px_rgba(255,113,206,0.8)] transition-all duration-300 font-bold">NUSRAT</span>
+<span class="text-primary-container text-base sm:text-lg font-bold animate-pulse group-hover:scale-125 group-hover:drop-shadow-[0_0_12px_rgba(255,113,206,0.8)] transition-transform duration-300">✦</span>
+</a>
+<!-- Desktop Nav Links -->
+<nav class="hidden md:flex items-center gap-space-xs bg-surface-container-lowest/70 p-1 rounded-full backdrop-blur-md border border-white/5" data-active-classes="bg-primary-container text-on-primary font-label-md text-label-md shadow-[0_0_20px_rgba(255,113,206,0.45)]">
+<a class="px-4 py-1.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-semibold shadow-[0_0_20px_rgba(255,113,206,0.45)] transition-all" data-path="home" href="#">Home</a>
+<a class="px-space-md py-space-xs rounded-full text-on-surface-variant font-label-md text-label-md hover:text-on-surface hover:bg-white/5 transition-all" data-path="frames" href="#">Frames</a>
+<a class="px-space-md py-space-xs rounded-full text-on-surface-variant font-label-md text-label-md hover:text-on-surface hover:bg-white/5 transition-all" data-path="melodies" href="#">Melodies</a>
+</nav>
+<!-- Right Controls: Desktop Profile + Mobile Hamburger -->
+<div class="flex items-center gap-2">
+<!-- Desktop Profile Icon -->
+<div class="hidden md:flex w-8 h-8 rounded-full bg-primary items-center justify-center shadow-[0_0_16px_rgba(255,174,220,0.4)] cursor-pointer hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+</div>
+<!-- Mobile Hamburger Button -->
+<button aria-label="Toggle Navigation Menu" class="flex md:hidden items-center justify-center w-9 h-9 rounded-full bg-surface-container-high/80 border border-pink-500/30 text-pink-300 hover:text-white hover:bg-pink-500/20 active:scale-95 transition-all shadow-[0_0_12px_rgba(255,113,206,0.2)] focus:outline-none" id="openDrawerBtn">
+<span class="material-symbols-outlined text-[20px]">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Mobile Sliding Side Drawer & Backdrop Overlay -->
+<div class="fixed inset-0 z-50 pointer-events-none transition-all duration-300" id="mobileDrawer">
+<!-- Backdrop -->
+<div class="absolute inset-0 bg-black/80 backdrop-blur-md opacity-0 transition-opacity duration-300" id="drawerBackdrop"></div>
+<!-- Drawer Panel -->
+<div class="absolute right-0 top-0 translate-x-full transition-transform duration-300 w-80 max-w-[85vw] h-full bg-[#161422]/95 border-l border-pink-500/30 p-6 flex flex-col justify-between backdrop-blur-2xl shadow-[0_0_50px_rgba(255,113,206,0.3)] overflow-y-auto" id="drawerPanel">
+<!-- Drawer Header & Links -->
+<div>
+<div class="flex items-center justify-between pb-5 border-b border-white/10">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-lg tracking-wider text-primary font-bold">NUSRAT</span>
+<span class="text-primary-container font-bold text-lg animate-pulse">✦</span>
+</div>
+<button aria-label="Close Menu" class="w-9 h-9 rounded-full bg-surface-container-high/90 border border-white/10 flex items-center justify-center text-pink-300 hover:text-white hover:bg-pink-500/30 active:scale-90 transition-all" id="closeDrawerBtn">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Drawer Profile Quick Badge -->
+<div class="mt-5 p-3 rounded-xl bg-surface-container-lowest/80 border border-white/5 flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-primary flex items-center justify-center shadow-[0_0_14px_rgba(255,174,220,0.5)] shrink-0">
+<span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-sm text-on-surface truncate font-semibold">Nusrat's Space</span>
+<span class="font-body-sm text-[11px] text-tertiary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+Sanctuary Active
+</span>
+</div>
+</div>
+<!-- Navigation Links -->
+<nav class="flex flex-col gap-2.5 mt-5">
+<a class="flex items-center justify-between px-4 py-3 rounded-full bg-primary-container text-on-primary font-semibold shadow-[0_0_20px_rgba(255,113,206,0.4)] transition-all text-sm" data-path="home" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px]">home</span>
+<span>Home</span>
+</div>
+<span class="w-2 h-2 rounded-full bg-on-primary animate-pulse"></span>
+</a>
+<a class="flex items-center justify-between px-4 py-3 rounded-full text-on-surface-variant hover:text-white hover:bg-surface-container-high/60 transition-all text-sm font-medium" data-path="frames" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px]">photo_library</span>
+<span>Frames</span>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-pink-500/20 text-pink-300 border border-pink-500/30">13</span>
+</a>
+<a class="flex items-center justify-between px-4 py-3 rounded-full text-on-surface-variant hover:text-white hover:bg-surface-container-high/60 transition-all text-sm font-medium" data-path="melodies" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px]">music_note</span>
+<span>Melodies</span>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-secondary/20 text-secondary border border-secondary/30">10</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-full text-on-surface-variant hover:text-white hover:bg-surface-container-high/60 transition-all text-sm font-medium" data-path="profile" href="#">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+<span>Profile &amp; Settings</span>
+</a>
+</nav>
+</div>
+<!-- Drawer Footer -->
+<div class="pt-6 border-t border-white/10 flex flex-col gap-3">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container text-tertiary font-label-sm text-xs self-start border border-tertiary/20">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="tracking-wide">TRANSMITTING LIVE</span>
+</div>
+<p class="font-body-sm text-[11px] text-outline">Crafted with pure stardust • Made for Nusrat</p>
+</div>
+</div>
+</div>
+<main class="w-full pt-20 sm:pt-28 md:pt-32 pb-12 bg-background relative overflow-hidden">
+<div class="flex flex-col w-full relative">
+<!-- Ambient Cosmic Nebulae -->
+<div class="absolute -top-24 left-1/2 -translate-x-1/2 w-full max-w-6xl h-[650px] pointer-events-none overflow-hidden -z-10 opacity-70">
+<div class="absolute top-10 left-1/4 w-72 sm:w-96 h-72 sm:h-96 rounded-full bg-primary-container/20 blur-[110px] sm:blur-[130px] mix-blend-screen animate-pulse" style="animation-duration: 8s;"></div>
+<div class="absolute top-28 right-1/4 w-80 sm:w-[28rem] h-80 sm:h-[28rem] rounded-full bg-secondary-container/15 blur-[120px] sm:blur-[140px] mix-blend-screen animate-pulse" style="animation-duration: 11s;"></div>
+<div class="absolute -top-10 left-1/2 -translate-x-1/2 w-80 sm:w-[34rem] h-64 sm:h-[26rem] rounded-full bg-tertiary-container/15 blur-[130px] sm:blur-[150px] mix-blend-screen"></div>
+</div>
+<!-- HERO SECTION: SACRED SANCTUARY & ARTWORK SHOWCASE -->
+<section class="w-full max-w-6xl mx-auto px-4 sm:px-6 md:px-margin pt-2 sm:pt-6 pb-12 sm:pb-16 flex flex-col items-center">
+<!-- Over-title Sparkle Badge -->
+<div class="inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-4 py-1 sm:py-1.5 rounded-full bg-surface-container-high/80 backdrop-blur-xl text-primary font-label-md text-xs sm:text-label-md shadow-xl mb-4 sm:mb-6 border border-pink-500/20 hover:shadow-primary/30 transition-all cursor-default text-center">
+<span class="text-primary-container text-xs animate-spin" style="animation-duration: 6s;">✦</span>
+<span class="tracking-widest uppercase text-[11px] sm:text-xs">Sacred Sanctuary &amp; Memories</span>
+<span class="text-secondary text-xs">✦</span>
+</div>
+<!-- Main Headline with Neo-Vaporwave Ambient Glow -->
+<div class="text-center relative max-w-3xl mb-3 sm:mb-4 px-2">
+<h1 class="font-display-lg text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight font-extrabold text-on-surface">
+<span class="bg-gradient-to-r from-primary-fixed via-primary-container to-secondary bg-clip-text text-transparent drop-shadow-[0_0_35px_rgba(255,113,206,0.55)]">HELLO NUSRAT</span>
+</h1>
+<div class="inline-block mt-2">
+<span class="inline-flex flex-wrap items-center justify-center gap-1 sm:gap-2 text-on-surface-variant font-headline-sm text-sm sm:text-base md:text-headline-sm italic px-2">
+<span class="text-tertiary font-bold not-italic">☽</span>
+<span class="text-center">A warm, sacred haven made just for your gentle heart</span>
+<span class="text-primary font-bold not-italic">☾</span>
+</span>
+</div>
+</div>
+<p class="font-body-lg text-body-sm sm:text-body-md md:text-body-lg text-on-surface-variant text-center max-w-2xl mb-6 sm:mb-8 leading-relaxed px-4">May every quiet sigh find peace here, every prayer be softly answered, and every moment remind you of how deeply cherished you truly are. Welcome home to your little universe of tranquility and stardust.</p>
+<!-- Quick Status Pill Badges -->
+<div class="flex flex-wrap items-center justify-center gap-2 sm:gap-4 mb-8 sm:mb-10 text-on-surface px-2">
+<div class="flex items-center gap-2 px-3 py-1 sm:px-3.5 rounded-full bg-surface-container-low/90 backdrop-blur-md shadow-sm border border-white/5">
+<span class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_currentColor]"></span>
+<span class="font-label-md text-xs sm:text-label-md text-on-surface-variant">13 Curated Frames</span>
+</div>
+<div class="flex items-center gap-2 px-3 py-1 sm:px-3.5 rounded-full bg-surface-container-low/90 backdrop-blur-md shadow-sm border border-white/5">
+<span class="w-2 h-2 rounded-full bg-secondary-container shadow-[0_0_8px_currentColor]"></span>
+<span class="font-label-md text-xs sm:text-label-md text-on-surface-variant">10 Soulful Melodies</span>
+</div>
+<div class="flex items-center gap-2 px-3 py-1 sm:px-3.5 rounded-full bg-surface-container-low/90 backdrop-blur-md shadow-sm border border-white/5">
+<span class="w-2 h-2 rounded-full bg-tertiary shadow-[0_0_8px_currentColor] animate-pulse"></span>
+<span class="font-label-md text-xs sm:text-label-md text-tertiary">Infinite Serenity</span>
+</div>
+</div>
+<!-- CENTRAL SHOWCASE ARCH: Attached Artwork -->
+<div class="relative w-full max-w-4xl group">
+<!-- Ambient Glow Behind Arch -->
+<div class="absolute -inset-2 bg-gradient-to-b from-primary-container/30 via-secondary-container/20 to-tertiary/10 rounded-t-[5rem] sm:rounded-t-[8rem] md:rounded-t-[10rem] rounded-b-3xl blur-2xl opacity-60 group-hover:opacity-90 transition-opacity duration-700 pointer-events-none"></div>
+<!-- Islamic Architectural Arch Container -->
+<div class="relative w-full bg-surface-container-lowest/85 backdrop-blur-2xl rounded-t-[4.5rem] sm:rounded-t-[7.5rem] md:rounded-t-[9.5rem] rounded-b-3xl p-2.5 sm:p-4 md:p-5 shadow-2xl flex flex-col items-center overflow-hidden border border-white/10">
+<!-- Decorative Arch Crown Top Indicator -->
+<div class="flex items-center justify-center gap-2 py-1.5 sm:py-3 mb-1 text-primary-fixed">
+<span class="text-xs">✧</span>
+<span class="font-label-sm text-[10px] sm:text-label-sm uppercase tracking-widest text-outline">Vintage Silk &amp; Palestinian Tatreez</span>
+<span class="text-xs">✧</span>
+</div>
+<!-- Masterpiece Image Frame with Arch Curve Mask -->
+<div class="relative w-full h-[340px] sm:h-[460px] md:h-[520px] lg:h-[600px] rounded-t-[3.8rem] sm:rounded-t-[6.8rem] md:rounded-t-[8.5rem] rounded-b-2xl overflow-hidden shadow-inner group/art">
+<img alt="Sacred Oriental Tapestry Collage for Nusrat" class="w-full h-full object-cover object-center transform group-hover/art:scale-105 transition-transform duration-1000 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVsB6E-RYXxiMInHUmeCaCtoFKB51z_Sze6lvE65jUohK09YpQx-r-uPniR4JauHsUj6fLfYN4E0pFv_y3HREXRSjVZKyIq1N2Y0kRyvE5fhUSMDxy6zxDFqA6GUQ1ChZK7Ct5Cyf470ptZErVBwr97sMjE1JriwBEFRCtrpOuJKVMqFcqnrFmzMjSE4ysghVOPtLJVg33ltkErbF0Xzjx4D8oPHrM8m2EXrKURfccEvSpff6fMfLsxOMSZApfkXJG"/>
+<!-- Gradient Atmospheric Scrims -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-surface-container-lowest/30 pointer-events-none"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-primary-container/10 via-transparent to-secondary-container/10 mix-blend-color-dodge pointer-events-none"></div>
+<!-- Floating Stardust Stars / Hearts Overlay -->
+<div class="absolute top-4 left-4 sm:top-8 sm:left-8 md:top-12 md:left-12 flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md shadow-xl text-primary-fixed border border-white/10">
+<span class="material-symbols-outlined text-[14px] sm:text-[16px] text-primary" style='font-variation-settings: "FILL" 1;'>favorite</span>
+<span class="font-label-sm text-[10px] sm:text-label-sm tracking-wide">Nusrat's Keepsake</span>
+</div>
+<!-- Bottom Floating Calligraphy Strip -->
+<div class="absolute bottom-3 sm:bottom-6 inset-x-3 sm:inset-x-6 md:inset-x-8 p-3 sm:p-4 rounded-xl bg-surface-container-lowest/90 backdrop-blur-xl shadow-2xl border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3">
+<div class="flex items-center gap-2.5 sm:gap-3 w-full sm:w-auto text-center sm:text-left">
+<div class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary shadow-[0_0_15px_rgba(255,174,220,0.35)] shrink-0 mx-auto sm:mx-0">
+<span class="material-symbols-outlined text-[18px] sm:text-[20px]" style='font-variation-settings: "FILL" 1;'>auto_awesome</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="font-headline-sm text-sm sm:text-headline-sm text-on-surface font-semibold tracking-wide truncate sm:whitespace-normal">وَلَسَوْفَ يُعْطِيكَ رَبُّكَ فَتَرْضَىٰ</p>
+<p class="font-body-sm text-[11px] sm:text-body-sm text-on-surface-variant line-clamp-1 sm:line-clamp-none">"And your Lord is going to give you, and you will be satisfied." — Surah Ad-Duha: 5</p>
+</div>
+</div>
+<a class="w-full sm:w-auto px-4 py-2 rounded-full bg-primary-container text-on-primary font-label-md text-xs sm:text-label-md shadow-[0_0_20px_rgba(255,113,206,0.4)] hover:scale-105 transition-transform flex items-center justify-center gap-1.5 shrink-0" data-path="frames" href="#">
+<span>View In Full</span>
+<span class="material-symbols-outlined text-[16px]">zoom_in</span>
+</a>
+</div>
+</div>
+<!-- Arch Footer Sub-details -->
+<div class="w-full flex flex-col sm:flex-row items-center justify-between gap-2 px-3 sm:px-4 py-2.5 sm:py-3 mt-1 text-on-surface-variant text-[11px] sm:text-body-sm font-body-sm text-center sm:text-left">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary shrink-0"></span>
+<span>Hand-curated heirloom collage • Medina, Jerusalem &amp; Antique Tatreez</span>
+</div>
+<span class="font-label-md text-[10px] sm:text-label-md text-outline tracking-wider">FRAME #01 ARCHIVAL MASTERPIECE</span>
+</div>
+</div>
+</div>
+<!-- Primary Action CTAs -->
+<div class="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 mt-7 sm:mt-10 w-full sm:w-auto px-4">
+<a class="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-3.5 rounded-full bg-gradient-to-r from-primary-container to-inverse-primary text-on-primary font-headline-sm text-sm sm:text-base font-semibold shadow-[0_0_28px_rgba(255,113,206,0.5)] hover:scale-105 active:scale-95 transition-all text-center flex items-center justify-center gap-2 group" data-path="frames" href="#">
+<span>Explore Frames Gallery</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<a class="w-full sm:w-auto px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-surface-container-high/70 backdrop-blur-xl text-secondary font-headline-sm text-sm sm:text-base font-semibold shadow-xl border border-secondary/20 hover:bg-surface-container-highest active:scale-95 transition-all text-center flex items-center justify-center gap-2.5" data-path="melodies" href="#">
+<span class="material-symbols-outlined text-[18px] text-secondary">graphic_eq</span>
+<span>Melodies &amp; Nocturnes</span>
+<span class="w-2 h-2 rounded-full bg-secondary-fixed animate-ping"></span>
+</a>
+</div>
+</section>
+<!-- SANCTUARY BENTO GRID: DETAILS, HARMONIC PLAYER & PRAYER REFLECTIONS -->
+<section class="w-full max-w-6xl mx-auto px-4 sm:px-6 md:px-margin py-6 sm:py-12">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6 sm:mb-8">
+<div>
+<div class="flex items-center gap-2 text-primary font-label-md text-xs sm:text-label-md uppercase tracking-wider mb-1">
+<span>✧</span>
+<span>NOCTURNAL SANCTUARY</span>
+</div>
+<h2 class="font-headline-lg text-2xl sm:text-3xl md:text-headline-lg text-on-surface font-bold">Curated Treasures &amp; Resonances</h2>
+</div>
+<div class="flex items-center gap-2 self-start sm:self-auto">
+<span class="font-label-sm text-[11px] sm:text-label-sm text-outline uppercase tracking-widest">Sanctuary Sync: Live</span>
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary shadow-[0_0_10px_currentColor] animate-pulse"></span>
+</div>
+</div>
+<!-- Bento Grid Container: 2-column on desktop / stacked on mobile -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6">
+<!-- Card 1: Arabic Du'a & Calligraphy Reflection (7 cols on lg) -->
+<div class="lg:col-span-7 bg-surface-container-low/75 backdrop-blur-xl rounded-2xl p-5 sm:p-7 md:p-8 shadow-xl flex flex-col justify-between relative overflow-hidden group border border-white/5">
+<div class="absolute -right-16 -top-16 w-64 h-64 rounded-full bg-primary-container/10 blur-[80px] pointer-events-none"></div>
+<div>
+<!-- Header Tag -->
+<div class="flex items-center justify-between mb-5 sm:mb-6">
+<span class="px-3 py-1 rounded-full bg-primary-container/20 text-primary font-label-sm text-xs sm:text-label-sm tracking-wider uppercase border border-pink-500/20">
+Calligraphy Reflection
+</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">temple_buddhist</span>
+</div>
+<!-- Featured Verses from artwork -->
+<div class="p-4 sm:p-6 rounded-xl bg-surface-container-lowest/85 backdrop-blur-md mb-5 sm:mb-6 shadow-inner text-right border border-white/5">
+<p class="font-headline-lg text-xl sm:text-2xl md:text-headline-lg text-primary-fixed mb-2 font-bold leading-loose tracking-wide flex items-center justify-end gap-2 sm:gap-2.5">
+<span class="inline-flex items-center justify-center font-headline-sm text-primary text-lg sm:text-2xl drop-shadow-[0_0_8px_rgba(255,174,220,0.5)] font-normal not-italic">۝٦١</span>
+<span>إِنَّ رَبِّي قَرِيبٌ مُّجِيبٌ</span>
+</p>
+<p class="text-left font-body-sm text-xs sm:text-body-sm text-on-surface-variant italic pt-2 border-t border-white/5">“Indeed, my Lord is near and responsive.” — Surah Hud: 61</p>
+</div>
+<p class="font-body-md text-xs sm:text-body-md text-on-surface-variant leading-relaxed mb-4">A comforting sanctuary for the nocturnal soul through two intimate divine names: <span class="text-primary font-medium">Al-Qareeb</span> (The Ever-Near) and <span class="text-secondary font-medium">Al-Mujeeb</span> (The One who responds). Al-Qareeb is closer to you than your jugular vein—present in your quietest moments and aware of unspoken sighs before they even form into words. Al-Mujeeb guarantees that no sincere yearning is ever overlooked or lost in the cosmos. Whenever you call out in solitude, divine mercy and solace are already answering.</p>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-3 pt-3 sm:pt-4 text-on-surface-variant font-label-md text-xs sm:text-label-md border-t border-white/5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-tertiary">check_circle</span>
+<span>Archival Cotton &amp; Gold Gilt Threads</span>
+</div>
+<span class="text-primary font-semibold">Tapestry No. 01 / 13</span>
+</div>
+</div>
+<!-- Card 2: Interactive Ambient Harmonic Audio Player / Sacred Moments (5 cols on lg) -->
+<div class="lg:col-span-5 relative rounded-2xl overflow-hidden shadow-2xl min-h-[320px] sm:min-h-[400px] h-full flex flex-col justify-between p-5 sm:p-7 group/tilt border border-pink-500/20" id="sacredMomentsTiltCard" style="perspective: 1000px; transform-style: preserve-3d; transition: transform 0.4s ease-out, box-shadow 0.4s ease-out;">
+<img alt="Pages of Illumination - Nusrat's Desk" class="absolute inset-0 w-full h-full object-cover object-center transform group-hover/tilt:scale-105 transition-transform duration-700 ease-out -z-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjBCWUkNjpivE52d-fl54AHTMWTwP3c8Qf4FG6rTEX5TdCz8t1tiwvAh9QFiPIbYJ-lB3-bVRSfCuY8ggVqiLY7hXsirXjJHgIeEkxM5kcmAZCp6y-eSI_OLcVUVK0QmCVmQXPBnBQojsZtKsd0djnhLpqJJfT-pVvn_xmnrh-24UwbX2J6V2LUfQD8J6ZDJ04pKr0zTO2alwpP_Dbpk066Hd_6vefglz_agT8SAOnSDyme8pjnUP64jbOGscAmwKF"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-surface-container-lowest/35 to-black/40 pointer-events-none -z-10"></div>
+<div class="absolute inset-0 bg-gradient-to-tr from-primary-container/15 via-transparent to-secondary-container/15 mix-blend-screen pointer-events-none -z-10"></div>
+<!-- Top floating minimal tags -->
+<div class="flex items-center justify-between z-10" style="transform: translateZ(25px);">
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-lowest/85 backdrop-blur-md text-secondary border border-secondary/30 shadow-[0_0_15px_rgba(0,203,252,0.25)] font-label-sm text-[11px] sm:text-label-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-[14px]">auto_stories</span>
+<span>Words of Illumination</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-lowest/85 backdrop-blur-md text-primary-fixed border border-pink-500/30 shadow-md font-label-sm text-[11px] tracking-wide">
+<span class="material-symbols-outlined text-[13px] text-primary" style='font-variation-settings: "FILL" 1;'>favorite</span>
+<span>Nusrat's Desk</span>
+</div>
+</div>
+<!-- Bottom minimal glowing footer -->
+<div class="flex items-end justify-between z-10 pt-16" style="transform: translateZ(20px);">
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-lowest/85 backdrop-blur-md text-tertiary font-label-md text-xs sm:text-label-md shadow-md border border-tertiary/20">
+<span class="material-symbols-outlined text-[16px] text-tertiary">verified</span>
+<span>Sacred Study</span>
+</div>
+<span class="font-label-md text-xs sm:text-label-md text-secondary font-semibold drop-shadow-[0_0_8px_rgba(88,213,255,0.6)]">Frame #02 / 13</span>
+</div>
+</div>
+<!-- Card 3: Cute Dedication & Stardust Token Banner (full 12 cols) -->
+<div class="lg:col-span-12 bg-gradient-to-r from-surface-container-low via-surface-container to-surface-container-low rounded-2xl p-5 sm:p-7 md:p-8 shadow-xl relative overflow-hidden border border-white/5">
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 sm:gap-6">
+<div class="flex items-start sm:items-center gap-4 sm:gap-5">
+<div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-primary-container/20 flex items-center justify-center text-primary-container shadow-[0_0_25px_rgba(255,113,206,0.3)] shrink-0 border border-primary-container/30">
+<span class="material-symbols-outlined text-[24px] sm:text-[28px]" style='font-variation-settings: "FILL" 1;'>auto_awesome</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-base sm:text-headline-sm text-on-surface font-semibold">Crafted Exclusively For Nusrat</span>
+<span class="text-primary-container text-sm">✦</span>
+</div>
+<p class="font-body-md text-xs sm:text-body-md text-on-surface-variant mt-1 leading-relaxed">
+May your nocturnal hours always be draped in peaceful contemplation, beautiful melodies, and protective light.
+</p>
+</div>
+</div>
+<div class="flex items-center gap-3 w-full sm:w-auto justify-end shrink-0">
+<button class="w-full sm:w-auto px-5 py-2.5 rounded-full bg-surface-container-high text-primary hover:bg-surface-bright font-label-md text-xs sm:text-label-md transition-colors flex items-center justify-center gap-2 border border-pink-500/20 shadow-md active:scale-95">
+<span class="material-symbols-outlined text-[16px]" style='font-variation-settings: "FILL" 1;'>favorite</span>
+<span>Sanctuary Tour</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface-container-lowest/85 backdrop-blur-xl relative mt-space-lg sm:mt-space-xl border-t border-white/5 shadow-[0_8px_32px_0_rgba(0,0,0,0.37)]">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-margin py-6 sm:py-space-xl flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+<div class="flex flex-col items-center sm:items-start gap-1">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-base sm:text-headline-sm tracking-wide text-on-surface font-bold">NUSRAT</span>
+<span class="text-secondary text-base sm:text-headline-sm">✦</span>
+</div>
+<p class="font-body-sm text-xs sm:text-body-sm text-on-surface-variant max-w-sm">Curated nocturnal aesthetics &amp; harmonic frequencies</p>
+</div>
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-high/60 backdrop-blur-md text-tertiary font-label-sm text-xs shadow-[0_0_20px_rgba(0,227,142,0.15)] border border-tertiary/20">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-ping"></span>
+<span>● TRANSMITTING LIVE</span>
+</div>
+<div class="flex flex-col items-center sm:items-end gap-1 text-center sm:text-right">
+<span class="font-label-md text-xs sm:text-label-md text-on-surface-variant">Crafted with pure stardust • Made with ♥ for Nusrat</span>
+<span class="font-body-sm text-[11px] sm:text-body-sm text-outline">© 2025 Nusrat. All nocturnal rights reserved.</span>
+</div>
+</div>
+</footer>
+<!-- Interactive Vanilla JavaScript: Mobile Drawer & 3D Tilt Card -->
+<script>
+  (function initNusratResponsiveSystem() {
+    const openBtn = document.getElementById('openDrawerBtn');
+    const closeBtn = document.getElementById('closeDrawerBtn');
+    const backdrop = document.getElementById('drawerBackdrop');
+    const drawer = document.getElementById('mobileDrawer');
+    const panel = document.getElementById('drawerPanel');
+
+    function openDrawer() {
+      if (!drawer || !panel || !backdrop) return;
+      drawer.classList.remove('pointer-events-none');
+      backdrop.classList.remove('opacity-0');
+      backdrop.classList.add('opacity-100');
+      panel.classList.remove('translate-x-full');
+      panel.classList.add('translate-x-0');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeDrawer() {
+      if (!drawer || !panel || !backdrop) return;
+      drawer.classList.add('pointer-events-none');
+      backdrop.classList.remove('opacity-100');
+      backdrop.classList.add('opacity-0');
+      panel.classList.remove('translate-x-0');
+      panel.classList.add('translate-x-full');
+      document.body.style.overflow = '';
+    }
+
+    if (openBtn) openBtn.addEventListener('click', openDrawer);
+    if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+    if (backdrop) backdrop.addEventListener('click', closeDrawer);
+
+    // Escape key listener for mobile drawer accessibility
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeDrawer();
+    });
+
+    // Close mobile drawer if viewport resized to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 768) {
+        closeDrawer();
+      }
+    });
+
+    // Setup 3D Tilt for desk photo card
+    const card = document.getElementById('sacredMomentsTiltCard');
+    if (card) {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = ((y - centerY) / centerY) * -10;
+        const rotateY = ((x - centerX) / centerX) * 10;
+        card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.02, 1.02, 1.02)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+      });
+    }
+  })();
+</script>
+</body></html>
